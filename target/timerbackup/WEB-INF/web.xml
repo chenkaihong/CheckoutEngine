@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>TimingBackup</display-name>
+  
+  <listener>
+    <listener-class>com.bear.listener.Listener</listener-class>
+  </listener>
+  
+  <servlet>
+    <description>用于直接显示统计的列内容</description>
+    <servlet-name>ShowClomun</servlet-name>
+    <servlet-class>com.bear.servlet.showClomun.ShowModel</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowClomun</servlet-name>
+    <url-pattern>/ShowClomun</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>用于调用各服的修复文招问题的url</description>
+    <servlet-name>NewMarriageFix</servlet-name>
+    <servlet-class>com.bear.servlet.newMarriageFix.NewMarriageFix</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewMarriageFix</servlet-name>
+    <url-pattern>/NewMarriageFix</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>用于统计新用户和滚服用户消费比的数据(滚服用户：使用同一个linkID非第一次创建帐号的用户)</description>
+    <servlet-name>NewPlayerVSOldPlayerVouch</servlet-name>
+    <servlet-class>com.bear.servlet.newPlayerVSOldPlayerVouch.NewPlayerVSOldPlayerVouch</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewPlayerVSOldPlayerVouch</servlet-name>
+    <url-pattern>/NewPlayerVSOldPlayerVouch</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>用于统计在线玩家的上阵卡牌情况</description>
+    <servlet-name>HeroInfo</servlet-name>
+    <servlet-class>com.bear.servlet.playerHero.PlayerHero</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HeroInfo</servlet-name>
+    <url-pattern>/HeroInfo</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>用于统计兑换活动的元宝消耗</description>
+    <servlet-name>ExchangeActivity</servlet-name>
+    <servlet-class>com.bear.servlet.activityCost.ActivityCost</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExchangeActivity</servlet-name>
+    <url-pattern>/ExchangeActivity</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>用于统计孩子系统上线后对全线的影响</description>
+    <servlet-name>Baby</servlet-name>
+    <servlet-class>com.bear.servlet.baby.Baby</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Baby</servlet-name>
+    <url-pattern>/baby</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>用于全面统计孩子系统基础数据</description>
+    <servlet-name>BabyNew</servlet-name>
+    <servlet-class>com.bear.servlet.babyNew.BabyModel</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BabyNew</servlet-name>
+    <url-pattern>/babyNew</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>活跃用户充值统计</description>
+    <servlet-name>ActivityCount</servlet-name>
+    <servlet-class>com.bear.servlet.activityPlayer.Main</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ActivityCount</servlet-name>
+    <url-pattern>/ActivityCount</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>活动效果统计</description>
+    <servlet-name>activityEffect</servlet-name>
+    <servlet-class>com.bear.servlet.activityEffect.Main</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>activityEffect</servlet-name>
+    <url-pattern>/activityEffect</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>充值统计</description>
+    <servlet-name>voucherCount</servlet-name>
+    <servlet-class>com.bear.servlet.vipVoucher.Main</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>voucherCount</servlet-name>
+    <url-pattern>/voucherCount</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>玩家登录统计</description>
+    <servlet-name>loginCount</servlet-name>
+    <servlet-class>com.bear.servlet.loginCount.Main</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginCount</servlet-name>
+    <url-pattern>/loginCount</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>测试用例</description>
+    <servlet-name>Test</servlet-name>
+    <servlet-class>com.bear.servlet.ServletTest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Test</servlet-name>
+    <url-pattern>/Test</url-pattern>
+  </servlet-mapping>
+  
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+</web-app>

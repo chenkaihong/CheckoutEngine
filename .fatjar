@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Mon Nov 10 17:23:59 GMT+08:00 2014
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=CheckoutEngine.jar
+manifest.mergeall=true
+manifest.mainclass=com.bear.main.Main
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=
+includes=
